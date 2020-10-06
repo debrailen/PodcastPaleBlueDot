@@ -1,0 +1,351 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+/*normalizadores*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body main .episodios .rotar h2, body main .nosotros h2, body main .entrevistas h2, body main .topicos h2, body footer .novedades h3 {
+  padding: 4rem 2rem 1rem 2rem;
+  margin-top: 5rem;
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 1.5rem;
+  color: #060A24;
+  font-weight: 400; }
+
+body header .presentation p, body main .nosotros p, body footer div p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  margin: 2rem 1.4rem;
+  font-family: "IBM Plex Mono", sans-serif; }
+
+body main .nosotros, body main .topicos .temas {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center; }
+  @media screen and (min-width: 1000px) {
+    body main .nosotros, body main .topicos .temas {
+      flex-flow: row nowrap; } }
+
+html {
+  font-size: 12px; }
+
+body {
+  max-width: 100vw; }
+  @media screen and (min-width: 1000px) {
+    body {
+      max-width: 100vw; } }
+  body .top {
+    width: 100%;
+    position: fixed;
+    height: 45px;
+    top: 0;
+    padding: 10px 5%;
+    background-color: white;
+    z-index: 1; }
+    body .top .logo {
+      float: left;
+      margin-top: 0.7rem; }
+    body .top nav {
+      float: right; }
+      body .top nav .menu {
+        padding-top: 1rem;
+        /*checkbox transparente y en primer plano*/
+        /*animación del menu que se desplega*/
+        /*span -lineas del menu hamburguesa-*/
+        /*movimiento a cruz*/
+        /*menu simple con tamaño mayor a 1000px*/ }
+        body .top nav .menu ul {
+          /*posicion absolute para que se posicione debajo del resto del header - top medida del header*/
+          width: 100%;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          overflow: hidden;
+          list-style: none;
+          background: #0000FF 0%;
+          height: 0px;
+          transition: height 0.5s ease; }
+          body .top nav .menu ul li {
+            position: relative; }
+          body .top nav .menu ul li:hover {
+            background: #00F3BB; }
+          body .top nav .menu ul a {
+            position: relative;
+            text-decoration: none;
+            font-family: "IBM Plex Mono", sans-serif;
+            font-weight: 400;
+            padding: 16px 5%;
+            line-height: 28px;
+            display: block;
+            color: white; }
+        body .top nav .menu input {
+          display: block;
+          width: 40px;
+          height: 32px;
+          opacity: 0;
+          z-index: 2;
+          position: absolute; }
+        body .top nav .menu [type="checkbox"]:checked ~ ul {
+          height: 250px;
+          transition: height 0.5s ease-in-out;
+          -moz-transition: height 0.5s ease-in-out;
+          -o-transition: height 0.5s ease-in-out;
+          -webkit-transition: height 0.5s ease-in-out; }
+        body .top nav .menu span {
+          display: block;
+          width: 25px;
+          height: 2.5px;
+          margin-bottom: 5.5px;
+          position: relative;
+          background: #000;
+          z-index: 1;
+          transform-origin: 3px 0px;
+          transition: transform 0.5s ease, opacity 0.55s ease; }
+        body .top nav .menu span:first-child {
+          transform-origin: 0% 0%; }
+        body .top nav .menu span:nth-last-child(2) {
+          transform-origin: 0% 100%; }
+        body .top nav .menu input:checked ~ span {
+          opacity: 1;
+          transform: rotate(45deg) translate(1px, 1px); }
+        body .top nav .menu input:checked ~ span:nth-last-child(3) {
+          opacity: 0;
+          transform: rotate(0deg) scale(0.2, 0.2); }
+        body .top nav .menu input:checked ~ span:nth-last-child(2) {
+          transform: rotate(-45deg); }
+        @media screen and (min-width: 1000px) {
+          body .top nav .menu ul {
+            position: relative;
+            top: 0;
+            right: 0;
+            overflow: hidden;
+            background: unset;
+            height: unset; }
+            body .top nav .menu ul li {
+              padding: 5px 10px;
+              display: inline-block; }
+            body .top nav .menu ul li:hover {
+              color: #00F3BB;
+              text-decoration: line-through;
+              background-color: unset; }
+            body .top nav .menu ul li:active {
+              color: #060A24;
+              text-decoration: line-through; }
+            body .top nav .menu ul a {
+              color: #060A24;
+              padding: unset;
+              line-height: unset; }
+            body .top nav .menu ul a:hover {
+              color: #00F3BB;
+              text-decoration: line-through;
+              background-color: white; }
+            body .top nav .menu ul a:active {
+              color: #060A24;
+              text-decoration: line-through;
+              background-color: white; }
+          body .top nav .menu input {
+            display: none; }
+          body .top nav .menu span {
+            display: none; } }
+  @media screen and (min-width: 1000px) {
+    body header {
+      max-width: 80vw;
+      margin: 0 auto; } }
+  body header .presentation {
+    margin-top: 6rem; }
+    @media screen and (min-width: 1000px) {
+      body header .presentation {
+        max-width: 40vw;
+        margin: 10rem 0 0 10em; } }
+    body header .presentation h1 {
+      margin: 2rem 1.4rem;
+      font-size: 3rem;
+      font-family: "IBM Plex Sans", sans-serif;
+      font-weight: 400;
+      line-height: 42px; }
+      body header .presentation h1 .tachado {
+        text-decoration: line-through; }
+    body header .presentation button {
+      width: 93vw;
+      background-color: #00F3BB;
+      text-transform: uppercase;
+      font-size: 1rem;
+      margin: 1rem;
+      padding: 1rem; }
+      @media screen and (min-width: 1000px) {
+        body header .presentation button {
+          width: 16rem; } }
+    body header .presentation button:hover {
+      color: white;
+      background: blue;
+      background: linear-gradient(90deg, blue 0%, #00f3bb 100%, #00f3bb 100%); }
+  body main {
+    margin-top: 2rem; }
+    body main .episodios {
+      background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+      transform: skewY(-6deg);
+      max-width: 100%; }
+      @media screen and (min-width: 1000px) {
+        body main .episodios {
+          max-width: 100vw; } }
+      body main .episodios .rotar {
+        transform: skewY(6deg);
+        height: 110rem; }
+        @media screen and (min-width: 1000px) {
+          body main .episodios .rotar {
+            height: 70rem; } }
+        body main .episodios .rotar h2 {
+          color: white; }
+          @media screen and (min-width: 1000px) {
+            body main .episodios .rotar h2 {
+              padding-top: 8rem;
+              max-width: 80vw;
+              margin: 0 0 0 20rem; } }
+        body main .episodios .rotar .podcast {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center; }
+          @media screen and (min-width: 1000px) {
+            body main .episodios .rotar .podcast {
+              display: flex;
+              flex-flow: row wrap;
+              justify-content: center;
+              margin: 0 3rem; } }
+          body main .episodios .rotar .podcast iframe {
+            margin: 1rem; }
+            @media screen and (min-width: 1000px) {
+              body main .episodios .rotar .podcast iframe {
+                width: 45%; } }
+    @media screen and (min-width: 1000px) {
+      body main .nosotros {
+        max-width: 60vw;
+        margin: 0 auto; } }
+    body main .nosotros img {
+      clear: both;
+      margin: 0 auto;
+      width: 25rem;
+      transform: translate(0, -10rem); }
+      @media screen and (min-width: 1000px) {
+        body main .nosotros img {
+          text-align: center;
+          margin: 4rem auto 0 auto; } }
+    body main .nosotros h2 {
+      margin-top: -70px;
+      padding-top: 0;
+      transform: translate(0, 1rem); }
+      @media screen and (min-width: 1000px) {
+        body main .nosotros h2 {
+          margin: 5rem auto 0 auto; } }
+    body main .nosotros p {
+      margin: 0;
+      padding: 1rem 2rem 1rem 2rem; }
+    @media screen and (min-width: 1000px) {
+      body main .entrevistas {
+        max-width: 100vw; } }
+    body main .entrevistas h2 {
+      padding-top: 0; }
+      @media screen and (min-width: 1000px) {
+        body main .entrevistas h2 {
+          padding-top: 8rem;
+          max-width: 80vw;
+          margin: 0 0 0 20rem; } }
+    body main .entrevistas .container {
+      display: flex;
+      flex-flow: column wrap; }
+      @media screen and (min-width: 1000px) {
+        body main .entrevistas .container {
+          flex-flow: row wrap; } }
+      @media screen and (min-width: 1000px) {
+        body main .entrevistas .container .galeria {
+          width: calc(100% / 3); } }
+      body main .entrevistas .container .galeria img {
+        width: 100%;
+        margin: -5px; }
+    @media screen and (min-width: 1000px) {
+      body main .topicos {
+        max-width: 60vw;
+        margin: 4rem auto 0 auto; } }
+    body main .topicos h2 {
+      padding-top: 0; }
+    @media screen and (min-width: 1000px) {
+      body main .topicos .temas {
+        flex-flow: row nowrap; } }
+    body main .topicos .temas .grid {
+      justify-content: center;
+      text-align: center;
+      padding-top: 2.5rem; }
+      @media screen and (min-width: 1000px) {
+        body main .topicos .temas .grid {
+          flex-flow: column nowrap;
+          display: grid;
+          margin: 0 4rem;
+          justify-items: center; } }
+      body main .topicos .temas .grid h6 {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 600;
+        margin: 2rem 1.4rem;
+        font-family: "IBM Plex Mono", sans-serif; }
+  body footer .novedades {
+    height: 230px;
+    /*Chrome,Safari*/
+    -webkit-clip-path: polygon(0px 500px, 100% 501px, 100% 0px, 0px 50px);
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%); }
+    body footer .novedades h3 {
+      color: white;
+      transform: translateY(3rem);
+      text-align: center; }
+      @media screen and (min-width: 1000px) {
+        body footer .novedades h3 {
+          display: flex;
+          justify-content: center;
+          max-width: 60vw;
+          margin: 4rem auto 0 auto; } }
+    body footer .novedades button {
+      transform: translateY(3rem);
+      width: 93vw;
+      background-color: #00F3BB;
+      text-transform: uppercase;
+      font-size: 1rem;
+      margin: 1rem;
+      padding: 1rem; }
+      @media screen and (min-width: 1000px) {
+        body footer .novedades button {
+          display: flex;
+          justify-content: center;
+          width: 20rem;
+          text-align: center;
+          margin: 4rem auto 0 auto; } }
+  @media screen and (min-width: 1000px) {
+    body footer div {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 90vw;
+      margin: 0 auto; } }
+  body footer div p {
+    text-align: center; }
+  body footer div .rrss {
+    margin: 3rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around; }
+    body footer div .rrss a {
+      color: #060A24; }
+    @media screen and (min-width: 1000px) {
+      body footer div .rrss {
+        width: 25%;
+        justify-content: space-between; } }
+
+/*# sourceMappingURL=styles.css.map */
