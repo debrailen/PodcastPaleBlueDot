@@ -156,15 +156,15 @@ body {
             display: none; }
           body .top nav .menu span {
             display: none; } }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 700px) {
     body header {
       max-width: 80vw;
       margin: 0 auto; } }
   body header .presentation {
     margin-top: 6rem; }
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 700px) {
       body header .presentation {
-        max-width: 40vw;
+        max-width: 50vw;
         margin: 10rem 0 0 10em; } }
     body header .presentation h1 {
       margin: 2rem 1.4rem;
@@ -181,7 +181,7 @@ body {
       font-size: 1rem;
       margin: 1rem;
       padding: 1rem; }
-      @media screen and (min-width: 1000px) {
+      @media screen and (min-width: 700px) {
         body header .presentation button {
           width: 16rem; } }
     body header .presentation button:hover {
@@ -326,6 +326,11 @@ body {
           width: 20rem;
           text-align: center;
           margin: 4rem auto 0 auto; } }
+    @media screen and (min-width: 1000px) {
+      body footer .novedades button:hover {
+        color: white;
+        background: blue;
+        background: linear-gradient(90deg, blue 0%, #00f3bb 100%, #00f3bb 100%); } }
   @media screen and (min-width: 1000px) {
     body footer div {
       display: flex;

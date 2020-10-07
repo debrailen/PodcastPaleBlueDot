@@ -200,14 +200,14 @@ body {
     
 // inicio header
     header {
-        @media screen and (min-width: 1000px){
+        @media screen and (min-width: 700px){
             max-width: 80vw;
             margin: 0 auto;
         }
         .presentation {
             margin-top: 6rem;
-            @media screen and (min-width: 1000px){
-                max-width: 40vw;
+            @media screen and (min-width: 700px){
+                max-width: 50vw;
                 margin: 10rem 0 0 10em;    
             }
             h1 {
@@ -230,7 +230,7 @@ body {
                 font-size: 1rem;
                 margin: 1rem;
                 padding: 1rem;
-                @media screen and (min-width: 1000px){
+                @media screen and (min-width: 700px){
                     width: 16rem;
                 }
             }
@@ -241,6 +241,7 @@ body {
             }
             
         }
+
     }
     main {
         margin-top: 2rem;
@@ -435,6 +436,7 @@ body {
                     margin: 4rem auto 0 auto;
                 }
             }
+            
             button{
                 transform: translateY(3rem);
                 width: 93vw;
@@ -443,13 +445,20 @@ body {
                 font-size: 1rem;
                 margin: 1rem;
                 padding: 1rem;
+           
                 @media screen and (min-width: 1000px){
                     display: flex;
                     justify-content: center;
                     width: 20rem;
                     text-align: center;
                     margin: 4rem auto 0 auto;
-
+                }    
+            }
+            button:hover{
+                @media screen and (min-width: 1000px){
+                color: white;
+                background: rgb(0,0,255);
+                background: linear-gradient(90deg, rgba(0,0,255,1) 0%, rgba(0,243,187,1) 100%, rgba(0,243,187,1) 100%);;
                 }
             }
         }
